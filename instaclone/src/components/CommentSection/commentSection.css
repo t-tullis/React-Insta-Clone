@@ -1,0 +1,17 @@
+.post-card{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.post-card h4{
+    padding-left: 20px; 
+}
+.post-card p {
+    font-size: .9rem;
+}
+
+.comment{
+    margin-right: 5px;
+}

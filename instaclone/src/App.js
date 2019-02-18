@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p>
-            Set up CRA Boilerplate!
+            InstaClone
           </p>
           <Post user={this.state.user}/>
           {/* <CommentSection /> */}

@@ -7,10 +7,9 @@ import './postContainer.css'
 const Post = (props) =>{
     return(
         <div className='post-container'>
-            {props.user.map(post => {
-                console.log(post)
+            {props.user.map((post) => {
                 return (
-                <div className ="posts">
+                <div key={post.timestamp} className ="posts">
                     <div className='top-post-info'>
                         <img className='profile-thumb' src={post.thumbnailUrl} alt='profile' />
                         <p>{post.username}</p>
@@ -19,8 +18,12 @@ const Post = (props) =>{
                     <img src={post.imageUrl} alt='Post'/>
                         
                     <div className ='comments'>
-                    <h5>{post.likes} likes</h5>
-                    {post.comments.map(comment => {
+                        <div className='icons'>
+                            <i className="far fa-heart fa-lg"></i>
+                            <i className="far fa-comment fa-lg"></i>
+                        </div>
+                        <h5>{post.likes} likes</h5>
+                        {post.comments.map(comment => {
                         return(
                             <div>
                                 <Comment comment={comment} />

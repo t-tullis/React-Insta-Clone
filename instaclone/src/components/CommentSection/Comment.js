@@ -3,14 +3,27 @@ import PropTypes from 'prop-types';
 
 import './commentSection.css'
 
-const Comment = (props) => {
+class Comment extends React.Component{
+  constructor(props){
+    console.log(props)
+    super(props)
+    this.state ={
+      comment: props.comment
+    }
+  }
+
+  addNewComment= (e, i) =>{
+
+  }
+
+  render(){
     return(
             <div className = "post-card">
-                <h4 className='comment'>{props.comment.username}</h4>
-                <p>{props.comment.text}</p>
-
+                <h4 className='comment'>{this.state.comment.username}</h4>
+                <p>{this.state.comment.text}</p>
             </div>
     )
+}
 }
 
 Comment.propTypes = {

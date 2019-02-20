@@ -7,9 +7,11 @@
 
 .post-card h4{
     padding-left: 20px; 
+    margin: 0;
 }
 .post-card p {
     font-size: .9rem;
+    margin: 5px 5px;
 }
 
 .comment{

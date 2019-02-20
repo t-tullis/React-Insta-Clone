@@ -11,13 +11,13 @@ const SearchBar = () => {
                 <i className="fab fa-instagram fa-2x"></i>
                 <img className='logo' src={logo} alt='logo'/>
                 <form>
-                    <input type='text' 
+                    <input className='searchBar-text' type='text' 
                     placeholder='Search' />
                 </form>
                 <div className = 'right-icons'>
                     <i className="fa fa-compass fa-2x" />
                     <i className="far fa-heart fa-2x"></i>
-                    <i class="far fa-user fa-2x"></i>
+                    <i className="far fa-user fa-2x"></i>
                 </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
 import data from './dummy-data';
 import './App.css';
 
@@ -13,13 +14,16 @@ class App extends Component {
   render() {
     console.log(this.state.user)
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Hello from App.js
-          </p>
-          <PostContainer user={this.state.user} />
-        </header>
+      <div>
+        <SearchBar />
+        <div className="App">
+          <header className="App-header">
+            <p>
+              Hello from App.js
+            </p>
+            <PostContainer user={this.state.user} />
+          </header>
+        </div>
       </div>
     );
   }

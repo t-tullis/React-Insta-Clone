@@ -1,9 +1,12 @@
 import React from 'react';
 
+import './CommentContainer.css'
+
 const Comment = (props) =>{
     return(
-        <div>
-            <span>{props.comment.username}</span><span>{props.comment.text}</span>
+        <div className='full-comment'>
+            <span className='comment-usr'><strong>{props.comment.username}</strong></span>
+            <span className='comment-txt'>{props.comment.text}</span>
         </div>
     )
 }

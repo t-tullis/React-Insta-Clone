@@ -1,11 +1,31 @@
 import React from 'react';
 import CommentSection from '../CommentContainer/CommentSection';
 
+import './PostContainer.css'
+
 const Post = (props) =>{
     return(
         <div>
-            <img src={props.post.imageUrl} alt='post' />
-            <CommentSection comments={props.post.comments}/>
+            <div className='post-header'>
+                <img className='thumbnail-pic' src={props.post.thumbnailUrl} alt='profile thumbnail' />
+                <span className='username'>{props.post.username}</span>
+            </div>
+            <img className='post-img' src={props.post.imageUrl} alt='post' />
+            
+            <div className='comment-section'>
+            <div className='icons'>
+                <i className="far fa-heart fa-lg"></i>
+                <i className="far fa-comment fa-lg"></i>
+                <p className='likes'>{props.post.likes} likes</p>
+            </div>
+                <CommentSection comments={props.post.comments}/>
+            <div>
+                <form className= 'comment-input'>
+                    <input type='text'
+                    placeholder = 'Add a comment...' />
+                </form>
+            </div>
+            </div>
         </div>
     )
 }

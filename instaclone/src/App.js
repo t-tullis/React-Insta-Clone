@@ -18,9 +18,6 @@ class App extends Component {
         <SearchBar />
         <div className="App">
           <header className="App-header">
-            <p>
-              Hello from App.js
-            </p>
             <PostContainer user={this.state.user} />
           </header>
         </div>

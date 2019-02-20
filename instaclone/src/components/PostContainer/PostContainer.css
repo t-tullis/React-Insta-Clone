@@ -1,0 +1,55 @@
+.post-img{
+    width: 100%;
+}
+
+.post-header{
+    display: flex;
+    align-items: center;
+    padding: 2% 3%;
+    border: 1px solid lightgray;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.username{
+    margin-left: 3%;
+}
+
+.thumbnail-pic{
+    border-radius: 50%;
+    width: 7%;
+}
+
+.comment-section{
+    border: 1px solid lightgray;
+    text-align: left;
+    margin-bottom: 5%;
+    padding-top: 1%; 
+    margin-top: -1%;
+}
+
+.icons{
+    text-align: left;
+}
+
+.icons .fa-heart, .icons .fa-comment{
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+.likes{
+    padding-left: 3%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.comment-input input{
+    width: 90%;
+    padding: 4% 2%;
+    border: none;
+    border-top: 1px solid lightgrey;
+    font-size: .8rem;
+    margin-top: 2%;
+    margin-left: 3%;
+}

@@ -40,16 +40,6 @@
 
 .likes{
     padding-left: 3%;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: bold;
-}
-
-.comment-input input{
-    width: 90%;
-    padding: 4% 2%;
-    border: none;
-    border-top: 1px solid lightgrey;
-    font-size: .8rem;
-    margin-top: 2%;
-    margin-left: 3%;
 }

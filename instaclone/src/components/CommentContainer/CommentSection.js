@@ -21,6 +21,12 @@ class CommentSection extends React.Component{
                         </div>
                     )
                 })}
+                <div>
+                    <form className= 'comment-input'>
+                    <input type='text'
+                    placeholder = 'Add a comment...' />
+                    </form>
+                </div>
             </div>
         )
     }

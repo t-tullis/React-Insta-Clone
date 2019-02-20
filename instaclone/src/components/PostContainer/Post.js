@@ -19,12 +19,6 @@ const Post = (props) =>{
                 <p className='likes'>{props.post.likes} likes</p>
             </div>
                 <CommentSection comments={props.post.comments}/>
-            <div>
-                <form className= 'comment-input'>
-                    <input type='text'
-                    placeholder = 'Add a comment...' />
-                </form>
-            </div>
             </div>
         </div>
     )

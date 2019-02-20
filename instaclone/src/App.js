@@ -1,32 +1,23 @@
 import React, { Component } from 'react';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
-import data from './dummy-data';
+import PostsPage from './components/PostContainer/PostsPage';
+import Login from './components/Login/Login';
 import './App.css';
+
 
 class App extends Component {
   constructor(){
     super()
     this.state={
-      user: []
     }
   }
-
-  componentDidMount(){
-    this.setState({
-      user: data
-    })
-  }
+  
   render() {
-    console.log(this.state.user)
     return (
       <div>
-        <SearchBar />
-        <div className="App">
-          <header className="App-header">
-            <PostContainer user={this.state.user} />
-          </header>
-        </div>
+        <Login />
+          <div className="App">
+            <PostsPage user={this.state.user} />
+          </div>
       </div>
     );
   }

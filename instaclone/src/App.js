@@ -8,8 +8,14 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-      user: data
+      user: []
     }
+  }
+
+  componentDidMount(){
+    this.setState({
+      user: data
+    })
   }
   render() {
     console.log(this.state.user)

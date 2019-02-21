@@ -1,13 +1,28 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import './CommentContainer.css'
 
+// ===================== STYLED COMPONETS ===================== 
+const FullComment = styled.div`
+    padding: 1% 3%;
+    font-size: .9rem; 
+`;
+
+const CommentTxt = styled.span`
+    margin-left: 1%
+`;
+
+const CommentUsr = styled.span`
+`;
+// =========================================================== 
+
 const Comment = (props) =>{
     return(
-        <div className='full-comment'>
-            <span className='comment-usr'><strong>{props.comment.username}</strong></span>
-            <span className='comment-txt'>{props.comment.text}</span>
-        </div>
+        <FullComment>
+            <CommentUsr><strong>{props.comment.username}</strong></CommentUsr>
+            <CommentTxt>{props.comment.text}</CommentTxt>
+        </FullComment>
     )
 }
 

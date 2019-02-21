@@ -1,11 +1,3 @@
-
-.logo{
-    width: 20%;
-    border-left: 1px black solid;
-    padding-left: 3%; 
-   padding-right: 5%;
-}
-
 .fa-instagram{
     padding-right: 3%;
 }
@@ -13,23 +5,4 @@
 .fa-compass, .fa-heart, .fa-user, .fa-sign-out-alt{
     margin-left: 35px;
     cursor: pointer;
-}
-
-
-.searchBar-text{
-    padding: 5px 25px;
-    text-align: center;
-}
-
-.searchBar-content{
-    display: flex;
-    align-items: center;
-    padding: 20px 0;
-    width: 750px;
-    margin: 0 auto;
-}
-
-.searchBar-container{
-    border-bottom: 1px solid lightgrey;
-    margin-bottom: 3%;
 }

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import './Login.css'
 
+// ===================== STYLED COMPONETS ===================== 
 const LoginWrapper = styled.div`
   width: 400px;
   margin: 0 auto;
@@ -22,6 +23,11 @@ const LoginForm = styled.div`
   font-size: 1rem;
   letter-spacing: 2px;
   cursor: pointer;
+
+  &:hover{
+    background: navy;
+    color: white;
+  }
 `;
 
 const FormInput = styled.input`
@@ -35,6 +41,7 @@ const SigninLogo = styled.img`
   margin: 0 auto;
   cursor: pointer;
 `;
+// =========================================================== 
 
 class Login extends React.Component {
     state = {

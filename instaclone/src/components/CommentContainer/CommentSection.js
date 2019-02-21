@@ -1,7 +1,24 @@
 import React from 'react';
 import Comment from './Comment';
+import styled from 'styled-components';
 
-import './CommentContainer.css'
+import './CommentContainer.css';
+
+// ===================== STYLED COMPONETS ===================== 
+const CommentForm = styled.form`
+`;
+
+const CommentInput = styled.input`
+    width: 90%;
+    padding: 4% 2%;
+    border: none;
+    border-top: 1px solid lightgrey;
+    font-size: .8rem;
+    margin-top: 2%;
+    margin-left: 3%;
+`;
+// =========================================================== 
+
 
 class CommentSection extends React.Component{
     constructor(props){
@@ -46,14 +63,14 @@ class CommentSection extends React.Component{
                     )
                 })}
                 <div>
-                    <form className= 'comment-input' onSubmit={this.sumbitComment}>
-                    <input type='text'
-                    value={this.state.comment}
-                    name='comment'
-                    placeholder = 'Add a comment...' 
-                    onChange={this.handleComment}
+                    <CommentForm onSubmit={this.sumbitComment}>
+                    <CommentInput type='text'
+                        value={this.state.comment}
+                        name='comment'
+                        placeholder = 'Add a comment...' 
+                        onChange={this.handleComment}
                     />
-                    </form>
+                    </CommentForm>
                 </div>
             </div>
         )

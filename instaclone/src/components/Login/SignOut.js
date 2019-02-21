@@ -14,7 +14,7 @@ class SignOut extends React.Component{
       };
     render(){
         return(
-            <i onClick={this.logOut} class="fas fa-sign-out-alt fa-2x"></i>
+            <i onClick={this.logOut} className="fas fa-sign-out-alt fa-2x"></i>
         )
     }
 }

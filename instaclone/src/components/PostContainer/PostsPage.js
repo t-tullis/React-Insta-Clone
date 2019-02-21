@@ -23,8 +23,9 @@ class PostsPage extends Component {
   constructor(){
     super()
     this.state={
-      user: []
-    }
+      user: [],
+      filteredPosts: []
+    };
   }
 
   componentDidMount(){
@@ -32,14 +33,25 @@ class PostsPage extends Component {
       user: data
     })
   }
+
+  filterSearch = e =>{
+      const user = this.state.user.filter(user =>{
+          if(user.username.includes(e.target.value)){
+              return user
+          }
+      });
+      this.setState({
+          filteredPosts: user
+      })
+  }
   render() {
-    console.log(this.state.user)
+    console.log(this.state.filteredPosts)
     return (
       <div>
-        <SearchBar />
+        <SearchBar filterSearch={this.filterSearch} />
         <div className="App">
           <header className="App-header">
-            <PostContainer user={this.state.user} />
+            <PostContainer user={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.user} />
           </header>
         </div>
       </div>

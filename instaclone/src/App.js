@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PostsPage from './components/PostContainer/PostsPage';
 import Login from './components/Login/Login';
+import authenticate from './components/Authentication/authenticate'
 import './App.css';
 
 
@@ -14,13 +15,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Login />
+        {/* <Login /> */}
           <div className="App">
-            <PostsPage user={this.state.user} />
+            <PostsPage />
           </div>
       </div>
     );
   }
 }
 
-export default App;
+export default authenticate(App)(Login);

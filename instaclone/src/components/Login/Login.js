@@ -1,5 +1,8 @@
 import React from "react";
 
+import './Login.css'
+import logo from '../../images/logo.png'
+
 
 class Login extends React.Component {
     state = {
@@ -17,20 +20,17 @@ class Login extends React.Component {
 
   signIn = e => {
     e.preventDefault();
-    localStorage.setItem(this.state.usernameInput, this.state.passwordInput);
+    const username = this.state.usernameInput
+    localStorage.setItem('username', username);
     window.location.reload();
   };
 
-  logOut = e => {
-    e.preventDefault();
-    localStorage.clear();
-    window.location.reload();
-  };
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.signIn}>
+      <div className='login'>
+        <form className='login-form' onSubmit={this.signIn}>
+        <img className='signin-logo'src={logo} alt='logo' />
             <input
                 type="text"
                 value={this.state.usernameInput}
@@ -41,8 +41,7 @@ class Login extends React.Component {
                 value={this.state.passwordInput}
                 onChange={this.handlePassword}
                 />
-                <button onClick={this.signIn}>Sign In</button>
-                <button onClick={this.logOut}>Log out</button>
+                <button className='sign-in' onClick={this.signIn}>Sign In</button>
             </form>
         </div>
     );

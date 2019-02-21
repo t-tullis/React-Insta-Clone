@@ -1,18 +1,3 @@
-// import React from 'react';
-// import PostContainer from './PostContainer'
-
-
-// const PostsPage = (props) => {
-//     console.log(props.user)
-//     return (
-//       <div>
-//             <PostContainer user={props.user} />
-//       </div>
-//     );
-//   }
-
-// export default PostsPage;
-
 import React, { Component } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';

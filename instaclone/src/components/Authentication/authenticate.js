@@ -15,8 +15,11 @@ const authenticate = App => Login =>
         this.setState({ loggedIn: true })
       }
     }
+    
     render() {
-      if (this.state.loggedIn) return <App />;
+      if (this.state.loggedIn){
+        return <App />
+      }
       return <Login/>
     }
   }

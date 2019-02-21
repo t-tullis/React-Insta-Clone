@@ -1,8 +1,40 @@
 import React from "react";
+import logo from '../../images/logo.png'
+import styled from 'styled-components'
 
 import './Login.css'
-import logo from '../../images/logo.png'
 
+const LoginWrapper = styled.div`
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 15%;
+`;
+
+const LoginForm = styled.div`
+  display: flex;
+  flex-direction: column;
+ `;
+
+ const SignIn = styled.button`
+  padding: 3%;
+  border-radius: 5px;
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+`;
+
+const FormInput = styled.input`
+  padding: 3% 1%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+`;
+
+const SigninLogo = styled.img`
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+`;
 
 class Login extends React.Component {
     state = {
@@ -28,22 +60,22 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className='login'>
-        <form className='login-form' onSubmit={this.signIn}>
-        <img className='signin-logo'src={logo} alt='logo' />
-            <input
+      <LoginWrapper>
+        <LoginForm onSubmit={this.signIn}>
+        <SigninLogo src={logo} alt='logo' />
+            <FormInput
                 type="text"
                 value={this.state.usernameInput}
                 onChange={this.handleUsername}
              />
-            <input
+            <FormInput
                 type="password"
                 value={this.state.passwordInput}
                 onChange={this.handlePassword}
                 />
-                <button className='sign-in' onClick={this.signIn}>Sign In</button>
-            </form>
-        </div>
+                <SignIn onClick={this.signIn}>Sign In</SignIn>
+            </LoginForm>
+        </LoginWrapper>
     );
   }
 }

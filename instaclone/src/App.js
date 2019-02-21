@@ -15,7 +15,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Login /> */}
           <div className="App">
             <PostsPage />
           </div>

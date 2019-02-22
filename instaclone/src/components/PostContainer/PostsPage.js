@@ -30,7 +30,7 @@ class PostsPage extends Component {
       })
   }
   render() {
-    console.log(this.state.filteredPosts)
+    console.log(this.state.user)
     return (
       <div>
         <SearchBar filterSearch={this.filterSearch} />

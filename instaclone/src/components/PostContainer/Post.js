@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentContainer/CommentSection';
 import styled from 'styled-components';
+import PropTypes from 'prop-types'
 import './PostContainer.css'
 
 // ===================== STYLED COMPONETS ===================== 
@@ -75,5 +76,13 @@ class Post extends React.Component{
         )
     }
 }
+
+Post.propTypes = {
+    post: PropTypes.shape({
+        thumbnailUrl: PropTypes.string,
+        username: PropTypes.string,
+        imageUrl: PropTypes.string
+    })
+};
 
 export default Post;

@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import './CommentContainer.css'
+import { string } from 'postcss-selector-parser';
 
 // ===================== STYLED COMPONETS ===================== 
 const FullComment = styled.div`
@@ -24,6 +26,13 @@ const Comment = (props) =>{
             <CommentTxt>{props.comment.text}</CommentTxt>
         </FullComment>
     )
+}
+
+Comment.propTypes ={
+    comment: PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string
+    })
 }
 
 export default Comment;

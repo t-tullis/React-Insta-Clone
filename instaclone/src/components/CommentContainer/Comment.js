@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import './CommentContainer.css'
-import { string } from 'postcss-selector-parser';
+
 
 // ===================== STYLED COMPONETS ===================== 
 const FullComment = styled.div`

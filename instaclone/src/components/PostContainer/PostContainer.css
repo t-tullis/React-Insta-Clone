@@ -1,0 +1,11 @@
+.icons{
+    text-align: left;
+}
+
+.icons .fa-heart, .icons .fa-comment{
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+

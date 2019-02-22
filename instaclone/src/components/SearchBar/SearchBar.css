@@ -1,0 +1,8 @@
+.fa-instagram{
+    padding-right: 3%;
+}
+
+.fa-compass, .fa-heart, .fa-user, .fa-sign-out-alt{
+    margin-left: 35px;
+    cursor: pointer;
+}
